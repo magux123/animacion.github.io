@@ -1,0 +1,88 @@
+body{
+    background: url(papiro.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+.wrapper {
+    width: 100%;
+    height: 300px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+}
+.pacman-wrapper {
+  width: 100%;
+  transform: translate(-50%, 0);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  animation-name: slide;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: backwards, forwards;
+}
+    .pacman {
+      width: 200px;
+      height: 200px;
+      display: block;
+      position: relative;
+    }
+      .pac {
+        width: 100%;
+        height: 50%;
+        background: yellow;
+        position: absolute;
+      }
+  
+      .top {
+        top: 0;
+        border-radius: 100px 100px 0 0;
+        animation: top .5s infinite linear;
+      }
+  
+      .bot {
+        bottom: 0;
+        border-radius: 0 0 100px 100px;
+        animation: bot .5s infinite linear;
+    }
+  
+  }
+  
+}
+.breadcrumb {
+  width: 100%;
+  transform: translate(0, -50%);
+  position: absolute;
+  top: 50%;
+}
+html{
+    padding-top: 130px;
+}
+  @keyframes slide {
+    from {
+      transform: translate(-30%, -30%);
+    }
+    to {
+      transform: translate(100%, -30%);
+    }
+  }
+  @keyframes top {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-35deg);
+    }
+  }
+
+  @keyframes bot {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(35deg);
+    }
+  }
